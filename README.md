@@ -1,8 +1,4 @@
-# Bachelor of Science <!-- omit in toc -->
-
-This repository was used for my bachelor thesis to graduate as Bachelor of Science in Business Informatics - (Core Process Engineering & Digital Management).
-
-The thesis was written using LateX with a MiKTeX installation on Windows and Visual Studio Code as text editor.
+# Seminararbeit <!-- omit in toc -->
 
 This project is based on [this respository](https://github.com/skyfrk/dhbw-vs-latex-template) and has been adjusted to my specific needs.
 
@@ -33,7 +29,7 @@ This project is based on [this respository](https://github.com/skyfrk/dhbw-vs-la
 ## Setup
 
 1. [Setup](#Prerequisites) your writing environment.
-1. [Download](https://github.com/florianloechle\dhbw-vs-latex) and extract this template. If you are using git you can use `git clone` instead.
+1. [Download](https://github.com/florianloechle\Prozess_Reifegradmodelle) and extract this template. If you are using git you can use `git clone` instead.
 2. Open the downloaded folder with your editor of choice.
 3. Customize `Konfiguration.tex` to your needs.
 4. Write your sections in `Content`. (actually optional, write them whereever you want)
