@@ -1,0 +1,62 @@
+%%**************************************************************
+%% Bachelorarbeit DHBW VS
+%%
+%% Autor: Florian Löchle
+%% Datum: 09.04.19
+%%
+%%**************************************************************
+
+\input{Ads/Praeambel}
+
+\begin{document}\selectlanguage{ngerman}\pagenumbering{Roman}
+
+\renewcommand{\figurename}{Abbildung }
+
+% hier werden die Trennvorschläge inkludiert
+\input{Settings/trennungen}
+\input{Settings/acronyms}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DECKBLATT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Ads/Deckblatt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SPERRVERMERK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifsperrvermerk \include{Ads/Sperrvermerk} \else \fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INHALTSVERZEICHNIS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABKÜRZUNGSVERZEICHNIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\fancyhead[R]{\textcolor{lightgrey}\thepage}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\section*{Abkürzungsverzeichnis}\label{abkürzungsverzeichnis}
+\ladeacronyme
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABBILDUNGSVERZEICHNIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TABELLENVERZEICHNIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Content/1_Einleitung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LITERATURVERZEICHNIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\printbibliography[title=Literaturverzeichnis]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ERKLÄRUNG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Ads/Erklaerung}
+
+\end{document}

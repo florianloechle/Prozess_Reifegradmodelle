@@ -1,0 +1,25 @@
+\newcommand{\addacronym}[3]{
+	\acro{#1}[#2]{#3}
+}
+\newcommand{\ladeacronyme}{
+\begin{acronym}[D-A-CH]
+
+\end{acronym}}
+
+\newcommand{\addfigure}[4]{
+	\begin{figure}[h!]
+		\centering
+		\caption{#1}
+		\includegraphics[width=#4]{#3}
+		\label{#2}
+	\end{figure}
+}
+
+\newcommand{\addlisting}[3]{
+	\begin{figure}[h!]
+		\centering
+		\caption{#1}
+		\label{#2}
+		{#3}
+	\end{figure}
+}

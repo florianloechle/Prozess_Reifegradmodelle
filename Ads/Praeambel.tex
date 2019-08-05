@@ -1,0 +1,162 @@
+%**********************
+% Dokumenteneinstellung
+%**********************
+\documentclass[hidelinks,12pt,a4paper,titlepage]{article}
+
+% Einstellungen laden
+
+\newcommand{\setting}[1]{%
+	\expandafter\newcommand\csname #1\endcsname{}
+	\expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
+}
+
+% Verfügbare Einstellungen definieren
+
+\newif\ifsperrvermerk
+\setting{arbeitstitel}
+\setting{kurs}
+\setting{abschluss}
+\setting{studiengang}
+\setting{dhbw}
+\setting{betreuer}
+\setting{arbeit}
+\setting{autor}
+\setting{sprache}
+\setting{schriftart}
+\setting{seitenrand}
+\setting{kapitelabstand}
+\setting{spaltenabstand}
+\setting{absatzabstand}
+\setting{zeilenabstand}
+\setting{zitierstil}
+\setting{sperrvermerk}
+
+% Einstellungen lesen
+
+\input{Konfiguration}
+
+% Sprachen und Sonderzeichen einstellen
+
+% Deutsche Sonderzeichen benutzen
+% https://ctan.org/pkg/babel
+\usepackage[ngerman]{babel}
+
+
+%%%%% PAKETE LADEN %%%%%
+
+% Grafiken aus PNG, JPG... Dateien einbinden
+% https://ctan.org/pkg/graphicx?lang=de
+\usepackage{graphicx}
+\graphicspath{{Abbildungen/}}
+
+% Used to wrap a figure in text
+\usepackage{wrapfig}
+
+% Latin Modern
+\usepackage{helvet}
+
+% Einfügen von Dummy Text zum Testen
+%\usepackage{lipsum}
+
+% Umlaute unter UTF8 nutzen
+% https://ctan.org/pkg/inputenc
+\usepackage[utf8]{inputenc}
+
+% Zeichenencoding
+% https://ctan.org/pkg/fontenc
+\usepackage[T1]{fontenc}
+
+% Floatende Bilder ermöglichen
+% https://ctan.org/pkg/float?lang=de
+\usepackage{float}
+
+% Festlegen der Section Header und größen
+\usepackage{titlesec}
+\configureHeadings
+
+% Packet für Seitenrandabständex und Einstellung für Seitenränder
+\usepackage[a4paper,lmargin={4cm},rmargin={1.5cm},tmargin={2.5cm},bmargin={2cm}]{geometry}
+
+% Bricht lange URLs "schoen" um
+\usepackage[hyphens,obeyspaces,spaces]{url}
+
+% Official Euro symbol
+\usepackage[official]{eurosym}
+
+% Required by biblatex
+\usepackage[autostyle=true]{csquotes}
+
+% Paket für Textfarben
+\usepackage{xcolor}
+\ladefarben
+
+\usepackage[bottom]{footmisc}
+
+\usepackage{array}
+\usepackage{longtable}
+
+% Erzeugt Inhaltsverzeichnis mit Querverweisen zu den Kapiteln (PDF Version)
+\usepackage{hyperref}
+
+% Neue Kopfzeilen mit FancyHDR
+\usepackage{fancyhdr} %Paket laden
+\pagestyle{fancy} %eigener Seitenstil
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{}
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\setlength{\headheight}{15pt}
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+
+% Paket für Zeilenabstand
+\usepackage[onehalfspacing]{setspace}
+
+% Util for the non-disclosure notice lettering on the title page
+\usepackage{rotating}
+
+% Paket für die Verwendung von mehreren Spalten
+\usepackage{multicol}
+
+% Für die Erstellung des Abkürungszverzeichniss
+\usepackage[printonlyused]{acronym}
+
+% Für das Erscheinungsbild von Code-Blocks
+%\usepackage{listings}
+%\listingsettings
+%\renewcommand{\lstlistingname}{Abb.}% Listing -> Algorithm
+
+%%%%% CONFIGUGURATION %%%%%
+
+\usepackage{\schriftart}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Titel, Autor und Datum
+\title{\titel}
+\author{\autor}
+\date{\datum}
+
+% Absatzabstände
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\absatzabstand}
+
+% Bibliography Settings
+\usepackage[backend=biber,style=iso-authoryear,hyperref=true,autocite=footnote,sortlocale=de_DE,maxnames=3,autolang=other,urldate=iso,date=iso,seconds=true]{biblatex}
+%\defbibheading{bibliography}[\refname]{\addsec{Literaturverzeichnis}}
+%\defbibheading{lit}{\section*{Literaturverzeichnis}}
+% Required changes
+%\defbibheading{lit}{\section{Literaturverzeichnis}}
+\defbibheading{lit}{\section*{Literaturverzeichnis}}
+\insertbibsource
+
+% Hurenkinder und Schusterjungen verhindern
+% http://projekte.dante.de/DanteFAQ/Silbentrennung
+\clubpenalty = 10000 % schließt Schusterjungen aus (Seitenumbruch nach der ersten Zeile eines neuen Absatzes)
+\widowpenalty = 10000 % schließt Hurenkinder aus (die letzte Zeile eines Absatzes steht auf einer neuen Seite)
+\displaywidowpenalty=10000
+
+
+
+% Caption Einstellungen für Bildunterschriften
+\usepackage[margin=10pt,textformat=simple,
+	labelsep=endash,format=plain,indention=0cm,justification=justified]{caption}
+\setlength {\marginparwidth }{2cm}

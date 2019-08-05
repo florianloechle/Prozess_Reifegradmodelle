@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   Konfiguration
+%
+% Hier können alle relevanten Einstellungen für diese Arbeit gesetzt werden.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Angaben  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Die meisten der folgenden Daten werden auf dem
+%% Deckblatt angezeigt, einige auch im weiteren Verlauf
+%% des Dokuments.
+\setzekurs{WI16B}
+\setzearbeitstitel{Methoden zur Messung des Reifegrads des Prozessmanagements und Ermittlung des Handlungsbedarfs}
+\setzestudiengang{Wirtschaftsinformatik - Process Engineering und Digital Management}
+\setzedhbw{Villingen-Schwenningen}
+\setzebetreuer{Prof. Dr. Puchan}
+\setzearbeit{Seminararbeit}
+\setzeautor{Steffen Karrer, Markus Kluge, \\ &  & Wladislaw Galster und Florian Löchle}
+\sperrvermerkfalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\insertbibsource}{
+	\addbibresource{Bib/SeminararbeitPuchan}
+}
+
+%% Zitierstil
+%% siehe: http://ctan.mirrorcatalogs.com/macros/latex/contrib/biblatex/doc/biblatex.pdf (3.3.1 Citation Styles)
+%% mögliche Werte z.B numeric-comp, alphabetic, authoryear
+\setzezitierstil{numeric-comp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Verschiedene Schriftarten
+% laut nag Warnung: palatino obsolete, use mathpazo, helvet (option scaled=.95), courier instead
+\setzeschriftart{helvet} % palatino oder goudysans, lmodern, libertine
+
+%% Paket um Seite im Querformat anzuzeigen
+%\usepackage{lscape}
+
+%% Seitenränder
+\setzeseitenrand{}
+
+%% Abstand vor Kapitelüberschriften zum oberen Seitenrand
+\setzekapitelabstand{22pt}
+
+%% Spaltenabstand
+\setzespaltenabstand{10pt}
+
+% Zeilenabstand innerhalb einer Tabelle
+\setzezeilenabstand{1.5}
+
+% Absatzabstand
+\setzeabsatzabstand{6pt}
+
+%% Überschriften Konfiguration
+\newcommand{\configureHeadings}{%
+	\titleformat{\section}[hang]
+	{\huge\bfseries}
+	{\thesection}{1em}{}
+	\titleformat{\subsection}[hang]
+	{\large\bfseries}
+	{\thesubsection}{1em}{}
+	\titleformat{\subsubsection}[hang]
+	{\normalsize\bfseries}
+	{\thesubsubsection}{1em}{}
+
+	\titlespacing
+	{\section}
+	{0pt}{\kapitelabstand}{22pt}
+	\titlespacing
+	{\subsection}
+	{0pt}{\kapitelabstand}{6pt}
+	\titlespacing
+	{\subsubsection
+	}{0pt}{\kapitelabstand}{6pt}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Verschiedenes  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Farben
+\newcommand{\ladefarben}{%
+	\definecolor{LinkColor}{HTML}{00007A}
+	\definecolor{lightgrey}{RGB}{114, 114, 114}
+	\definecolor{lightgray}{rgb}{.9,.9,.9}
+  \definecolor{darkgray}{rgb}{.4,.4,.4}
+	\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+	\definecolor{mygreen}{rgb}{0,0.6,0}
+}
+%% Mathematikpakete benutzen (Pakete aktivieren)
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Eigenes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hier können Ergänzungen zur Präambel vorgenommen werden (eigene Pakete, Einstellungen)
+\newcommand{\spacesmall}{7px}
+\newcommand{\spacemedium}{15px}
+\newcommand{\spacebig}{30px}
+
+
