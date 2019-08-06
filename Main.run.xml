@@ -84,7 +84,7 @@
       <file>Main.bcf</file>
     </requires>
     <requires type="editable">
-      <file>Bib/SeminararbeitPuchan</file>
+      <file>Bib/Reifegradmodelle.bib</file>
     </requires>
   </external>
 </requests>
